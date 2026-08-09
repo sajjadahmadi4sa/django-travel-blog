@@ -1,0 +1,9 @@
+        {% load blog_tags %}
+           <div class="sidebar-box ftco-animate">
+              <div class="categories">
+                <h2>Categories</h2>
+                {% for name,count in categories.items %}
+                <li><a href="{% url 'blog:category' cid=name.id %}">{{name}} <span>{{count}}</span></a></li>
+                {% endfor %}
+              </div>
+            </div>

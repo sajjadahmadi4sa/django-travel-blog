@@ -1,0 +1,40 @@
+{% load static %}
+<div class="travel-info mt-5">
+    <h3 class="mb-4">Travel Information</h3>
+
+    <div class="travel-info-card">
+
+        <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+                <span class="label">Destination</span>
+                <span class="value">{{ post.destination }}</span>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icon">💰</div>
+            <div class="info-content">
+                <span class="label">Budget</span>
+                <span class="value">{{ post.budget }}</span>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icon">⏱</div>
+            <div class="info-content">
+                <span class="label">Duration</span>
+                <span class="value">{{ post.duration }}</span>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icon">🎒</div>
+            <div class="info-content">
+                <span class="label">Travel Style</span>
+                <span class="value">{{ post.travel_style }}</span>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -43,7 +43,9 @@
                         <div class="author mb-3">
                           <span>
                               <i class="flaticon-user"></i>
-                              By {{ post.author.username }}
+                             <a href="{% url 'blog:author' author_username=post.author.username %}"> 
+                                By {{ post.author.username }}
+                             </a>
                           </span>
                        </div>
                         <h3 class="heading">
@@ -59,7 +61,7 @@
                   <div class="tag-widget post-tag-container mb-5 mt-5">
                     <div class="tagcloud">
                     {% for cat in post.category.all %}
-                      <a href="#" class="tag-cloud-link">{{cat.name}}</a>
+                      <a href="{% url 'blog:category' cid=cat.id %}" class="tag-cloud-link">{{cat.name}}</a>
                     {% endfor %}
                     </div>
                   </div>
@@ -68,6 +70,52 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+         <div class="sidebar-box ftco-animate">
+                <form action="{% url 'blog:search' %}" method="get">
+                    <div class="my-search-box">
+                        <input  type="text" name="q" placeholder="Search posts..." value="{{ request.GET.q|default:'' }}">
+                        <button type="submit">
+                            🔍
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="row mt-5">
+              <div class="row mt-5">
+                    <div class="col text-center">
+                        <div class="block-27">
+                            <ul>
+                                {% if posts.has_previous %}
+                                    <li>
+                                        <a href="?page={{ posts.previous_page_number }}">&lt;</a>
+                                    </li>
+                                {% endif %}
+
+
+                                {% for num in posts.paginator.page_range %}
+                                    {% if posts.number == num %}
+                                        <li class="active">
+                                            <span>{{ num }}</span>
+                                        </li>
+                                    {% else %}
+                                        <li>
+                                            <a href="?page={{ num }}">
+                                                {{ num }}
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if posts.has_next %}
+                                    <li>
+                                        <a href="?page={{ posts.next_page_number }}"> &gt;</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 {% endblock content %}

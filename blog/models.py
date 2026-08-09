@@ -20,6 +20,10 @@ class Post (models.Model):
     updated_date = models.DateTimeField(auto_now=True)
     published_date = models.DateTimeField(null=True)
     author = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    destination = models.CharField(max_length=100)
+    budget = models.CharField(max_length=50)
+    duration = models.CharField(max_length=50)
+    travel_style = models.CharField(max_length=100)
     
     class Meta :
         ordering = ['-created_date']

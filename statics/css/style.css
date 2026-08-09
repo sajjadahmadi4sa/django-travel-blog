@@ -9498,3 +9498,100 @@ textarea.form-control {
 .topp .day {
     font-size: 35px !important;
 }
+.travel-info {
+margin-top: 40px;
+}
+
+.travel-info h3 {
+font-size: 24px;
+font-weight: 500;
+color: #333;
+margin-bottom: 25px;
+}
+
+.travel-info-card {
+background: #fff;
+border: 1px solid #eee;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.info-item {
+display: flex;
+align-items: center;
+padding: 18px 20px;
+border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+border-bottom: none;
+}
+
+.info-icon {
+width: 42px;
+height: 42px;
+min-width: 42px;
+border-radius: 50%;
+background: #f9a825;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 15px;
+}
+
+.info-icon i {
+color: #fff;
+font-size: 20px;
+}
+
+.info-content {
+display: flex;
+flex-direction: column;
+}
+
+.info-content .label {
+font-size: 13px;
+color: #999;
+margin-bottom: 3px;
+}
+
+.info-content .value {
+font-size: 15px;
+color: #333;
+font-weight: 500;
+}
+
+.my-search-box {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 42px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.my-search-box input {
+    width: 230px !important;
+    height: 40px !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0 12px !important;
+    font-size: 13px;
+    background: transparent;
+    box-shadow: none !important;
+}
+
+.my-search-box button {
+    width: 50px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.my-search-box button:hover {
+    background: #f5f5f5;
+}
