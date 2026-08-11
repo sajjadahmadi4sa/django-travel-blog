@@ -1,0 +1,29 @@
+
+
+.signup-text {
+margin-top: 25px;
+text-align: center;
+
+
+color: #8a8f98;
+font-size: 14px;
+
+}
+
+.signup-text a {
+color: #667eea;
+text-decoration: none;
+
+
+font-weight: 600;
+
+margin-left: 5px;
+
+transition: all 0.2s ease;
+
+}
+
+.signup-text a:hover {
+color: #764ba2;
+text-decoration: underline;
+}

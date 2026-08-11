@@ -8,7 +8,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">Blog Details</h1>
+            <h1 class="mb-3 bread">{{post.title}}</h1>
             <p class="breadcrumbs"><span class="mr-2">
               <a href="{% url 'website:index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> 
               <span class="mr-2"><a href="{% url 'blog:index' %}">Blog <i class="ion-ios-arrow-forward"></i></a></span> 
@@ -35,6 +35,9 @@
                                 <i class="flaticon-user"></i>
                                 {{ post.published_date|date:"F d, Y" }}
                         </div>
+                        <span>
+                            {{ post.counted_view }} Views
+                        </span>
                       <div class="tag-widget post-tag-container mb-5 mt-5">
                         <div class="tagcloud">
                         {% for cat in post.category.all %}

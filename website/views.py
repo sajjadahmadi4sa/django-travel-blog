@@ -1,11 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import ContactForm
-from .models import Contact
+from .models import Contact 
+from blog.models import Post
 from django.contrib import messages
 
-def index_view (request):
-    return render (request,'website/index.html')
+
+
+def recent_posts():
+    posts = Post.objects.filter(status=True).order_by('-created_date')[:3]
+    return posts
+
+def index_view(request):
+    posts = recent_posts()
+    return render(request,'website/index.html',{'posts': posts})
 
 def about_view (request):
     return render (request,'website/about.html')
@@ -28,3 +36,5 @@ def contact_view(request):
     else:
         form = ContactForm()
     return render(request,'website/contact.html',{'form': form})
+
+

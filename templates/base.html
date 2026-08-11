@@ -29,8 +29,26 @@
   </head>
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Vacation<span>Travel Agency</span></a>
+        <header class="top-header">
+            <div class="auth-links">
+            {% if user.is_authenticated %}
+                <span class="welcome">
+                    Hello, {{ user.username }}
+                </span>
+                <a href="{% url 'accounts:logout' %}" class="auth-link logout">
+                    Logout
+                </a>
+            {% else %}
+                <a href="{% url 'accounts:login' %}" class="auth-link">
+                    Login
+                </a>
+                <a href="{% url 'accounts:signup' %}" class="auth-link signup">
+                    Sign Up
+                </a>
+            {% endif %}
+        </div>
+        </header>
+
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -39,11 +57,8 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="{% url 'website:index' %}" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="{% url 'website:about' %}" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
 	          <li class="nav-item"><a href="{% url 'blog:index' %}" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="{% url 'website:contact' %}" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta"><a href="#" class="nav-link">Book Now</a></li>
-
 	        </ul>
 	      </div>
 	    </div>

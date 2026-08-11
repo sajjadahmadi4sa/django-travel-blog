@@ -1,0 +1,84 @@
+<div class="col-md-12 heading-section text-center ftco-animate">
+
+    <h2 class="mb-4">Recent Post</h2>
+
+</div>
+
+
+<div class="row d-flex">
+
+    {% for post in posts %}
+
+        <div class="col-md-4 d-flex ftco-animate">
+
+            <div class="blog-entry justify-content-end">
+
+                <a
+                    href="{{ post.get_absolute_url }}"
+                    class="block-20"
+                    {% if post.image %}
+                        style="background-image: url('{{ post.image.url }}');"
+                    {% endif %}
+                >
+                </a>
+
+
+                <div class="text mt-3 float-right d-block">
+
+                    <div class="d-flex align-items-center mb-4 topp">
+
+                        <div class="one">
+
+                            <span class="day">
+                                {{ post.created_date|date:"d" }}
+                            </span>
+
+                        </div>
+
+
+                        <div class="two">
+
+                            <span class="yr">
+                                {{ post.created_date|date:"Y" }}
+                            </span>
+
+                            <span class="mos">
+                                {{ post.created_date|date:"F" }}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="heading">
+
+                        <a href="{{ post.get_absolute_url }}">
+                            {{ post.title }}
+                        </a>
+
+                    </h3>
+                        <p>
+                            {{ post.content|truncatechars:150 }}
+                        </p>
+
+                    <p>
+                        {{ post.excerpt }}
+                    </p>
+
+                </div>
+                        <div class="author mb-3">
+                          <span>
+                              <i class="flaticon-user"></i>
+                             <a href="{% url 'blog:author' author_username=post.author.username %}"> 
+                                By {{ post.author.username }}
+                             </a>
+                          </span>
+                       </div>
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+</div>

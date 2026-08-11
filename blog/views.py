@@ -31,6 +31,8 @@ def blog_view (request,cid=None,author_username=None,tag_name=None):
 
 def blog_single_view(request, pid):
     post = get_object_or_404(Post, pk=pid, status=True)
+    post.counted_view += 1
+    post.save(update_fields=['counted_view'])
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
