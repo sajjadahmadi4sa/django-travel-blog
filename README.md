@@ -69,3 +69,21 @@ django-travel-blog/
 ├── Procfile
 ├── requirements.txt
 └── .gitignore
+
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/blog.png)
+
+### Blog
+
+![Blog Page](screenshots/blog (2).png)
+
+### Contact
+
+![Contact Page](screenshots/blog (3).png)
+
+### Blog Detail
+
+![Blog Detail](screenshots/blog (4).png)
