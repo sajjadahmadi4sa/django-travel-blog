@@ -81,10 +81,10 @@ django-travel-blog/
 
 ![Blog Page](screenshots/blog_2.png)
 
-### Contact
+### Blog
 
 ![Contact Page](screenshots/blog_3.png)
 
-### Blog Detail
+### Blog 
 
 ![Blog Detail](screenshots/blog_4.png)
