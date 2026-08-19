@@ -69,6 +69,7 @@ django-travel-blog/
 ├── Procfile
 ├── requirements.txt
 └── .gitignore
+```
 
 ## Screenshots
 
