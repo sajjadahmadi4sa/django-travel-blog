@@ -11,5 +11,3 @@ pillow==12.3.0
 sqlparse==0.5.5
 tzdata==2026.3
 gunicorn
-psycopg[binary]
-dj-database-url
