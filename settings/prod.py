@@ -21,3 +21,12 @@ MIDDLEWARE = [
     middleware for middleware in MIDDLEWARE
     if middleware != 'debug_toolbar.middleware.DebugToolbarMiddleware'
 ]
+
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.config(
+        conn_max_age=600,
+        ssl_require=True
+    )
+}
