@@ -5,10 +5,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'YOUR-DOMAIN.COM',
-    'WWW.YOUR-DOMAIN.COM',
+    '127.0.0.1',
+    'localhost',
+    'travel-blog.ir',
+    'www.travel-blog.ir',
 ]
-
 
 INSTALLED_APPS = [
     app for app in INSTALLED_APPS
