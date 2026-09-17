@@ -1,1 +1,1 @@
-web: gunicorn --chdir . travel.wsgi:application
+web: python manage.py migrate && gunicorn --chdir . travel.wsgi:application
