@@ -1,17 +1,11 @@
 {
-"django": {
-  "pythonVersion": "3.12"
-}
-}
-
-{
-"build": {
-   "location": "germany"
-}
-}
-
-{
+  "django": {
+    "pythonVersion": "3.12"
+  },
+  "build": {
+    "location": "germany"
+  },
   "node": {
     "mirror": false
-}
+  }
 }
