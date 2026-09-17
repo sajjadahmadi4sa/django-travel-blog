@@ -1,5 +1,5 @@
 asgiref==3.12.1
-Django==6.0.7
+Django==5.2.17
 django-debug-toolbar==7.0.0
 django-extensions==4.1
 django-multi-captcha-admin==2.0.0
