@@ -6,11 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
-<link rel="stylesheet" href="{% static 'accounts/css/login.css' %}">
-
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/login.css' %}">
 </head>
+
 <body>
+
 <div class="login-page">
 
     <div class="login-card">
@@ -86,6 +87,16 @@
                     autocomplete="current-password"
                     required
                 >
+
+            </div>
+
+
+            <!-- Forgot Password -->
+            <div class="forgot-password">
+
+                <a href="{% url 'accounts:password_reset' %}">
+                    Forgot your password?
+                </a>
 
             </div>
 
