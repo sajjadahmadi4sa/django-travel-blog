@@ -50,3 +50,8 @@ LOGGING = {
     },
 }
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ROBOTS_SITEMAP_URLS = [
+    'https://travel-blog.ir/sitemap.xml',
+]
+
