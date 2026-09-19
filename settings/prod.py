@@ -54,4 +54,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ROBOTS_SITEMAP_URLS = [
     'https://travel-blog.ir/sitemap.xml',
 ]
-
+ROBOTS_USE_HOST = False
+ROBOTS_USE_SITEMAP = True
